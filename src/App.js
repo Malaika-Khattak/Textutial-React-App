@@ -1,15 +1,14 @@
-
 import './App.css';
 import Alert from './Components/Alert';
 import Navbar from './Components/Navbar';
 import Textfrom from './Components/textfrom';
 import React ,{useState} from 'react'
-import About from './Components/About';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+//import About from './Components/About';
+//import {
+  //BrowserRouter,
+  //Routes,
+  //Route,
+//} from "react-router-dom";
 
 
 
@@ -77,18 +76,20 @@ const grtoggle=()=>{
 
   return (
     <>
-    <BrowserRouter>
+   {/* <BrowserRouter>*/}
 <Navbar title="Textutial" abouttext="About Us" mode={mode} toggle={toggle} redtoggle={redtoggle} purtoggle={purtoggle} grtoggle={grtoggle}/>
 <Alert alert={alert}/>
 <div className="container my-3">
-  <Routes>
-    <Route path="/about" element={<About/>}/>
+ {/*  <Routes>
+    <Route exact path="/about" element={<About/>}/>
     </Routes>
-    <Routes>
-    <Route path="/" element={<Textfrom heading="Enter text to analyze:" mode={mode} />}/>
-  </Routes>
+  <Routes>
+    <Route exact path="/" element={*/}
+    <Textfrom heading="Enter text to analyze:" mode={mode} />
+  {/*}  }/>
+  </Routes>*/}
 </div>
-</BrowserRouter>
+{/*</BrowserRouter>*/}
     </>
   );
 }
